@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<script type="text/javascript" src="/webiopi.js"></script>
+<script type="text/javascript">
+webiopi().ready( function()
+{	// Initialize
+	webiopi().callMacro( "ChangeLedActive", [1, 0] );
+	webiopi().callMacro( "ChangeLedActive", [2, 0] );
+	webiopi().callMacro( "ChangeLedActive", [3, 0] );
+	webiopi().callMacro( "ChangeLedActive", [4, 0] );
+	webiopi().callMacro( "ChangeLedActive", [5, 0] );
+	webiopi().callMacro( "ChangeLedActive", [6, 0] );
+	webiopi().callMacro( "ChangeLedActive", [7, 0] );
+} );
+
+function onRadioLed( num )
+{
+	if( num == 0 ) {
+		webiopi().callMacro( "ChangeLedActive", [0, 1] );
+		return;
+	}
+	if( num == 1 ) {
+		webiopi().callMacro( "ChangeLedActive", [1, 1] );
+		return;
+	}
+	if( num == 2 ) {
+		webiopi().callMacro( "ChangeLedActive", [2, 1] );
+		return;
+	}
+	if( num == 3 ) {
+		webiopi().callMacro( "ChangeLedActive", [3, 1] );
+		return;
+	}
+	if( num == 4 ) {
+		webiopi().callMacro( "ChangeLedActive", [4, 1] );
+		return;
+	}
+	if( num == 5 ) {
+		webiopi().callMacro( "ChangeLedActive", [5, 1] );
+		return;
+	}
+	if( num == 6 ) {
+		webiopi().callMacro( "ChangeLedActive", [6, 1] );
+		return;
+	}
+	if( num == 7 ) {
+		webiopi().callMacro( "ChangeLedActive", [7, 1] );
+		return;
+	}
+	if( num == 8 ) {
+		webiopi().callMacro( "ChangeLedActive", [8, 1] );
+		return;
+	}
+	if( num == 9 ) {
+		webiopi().callMacro( "ChangeLedActive", [9, 1] );
+		return;
+	}
+}
+</script>
+</head>
+<body>
+７セグLEDを光らせるっ！<br>
+　７<input type="radio" name="led" onclick="onRadioLed(7)">
+　８<input type="radio" name="led" onclick="onRadioLed(8)">
+　９<input type="radio" name="led" onclick="onRadioLed(9)"><br><br>
+　４<input type="radio" name="led" onclick="onRadioLed(4)">
+　５<input type="radio" name="led" onclick="onRadioLed(5)">
+　６<input type="radio" name="led" onclick="onRadioLed(6)"><br><br>
+　１<input type="radio" name="led" onclick="onRadioLed(1)">
+　２<input type="radio" name="led" onclick="onRadioLed(2)">
+　３<input type="radio" name="led" onclick="onRadioLed(3)"><br><br>
+　０<input type="radio" name="led" onclick="onRadioLed(0)">
+<br>
+</body>
+</html>
